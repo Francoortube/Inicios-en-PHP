@@ -1,0 +1,208 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f5b625, #cdfe99);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #f5b625;
+  color: #222;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+/* NAV */
+nav {
+  background-color: #cdfe99;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+nav li {
+  margin: 0.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+
+#botonera_catalogo ul {
+ margin: 0;
+ padding: 0;
+ list-style-type: none;
+ background-color: white;
+}
+
+#botonera_catalogo ul li a {
+  padding: 7px;
+  width: 100%;
+  display: block;
+
+}
+
+h3 {
+color: green;
+
+}
+#text_catalogo {
+  width: 50%;
+}
+
+#imagen_catalogo img {
+  width: 30%;
+  float: right;
+}
+
+nav a:hover {
+  background-color: #f5b625;
+}
+
+.noticias {
+  width: 400px;
+  height: 650px;
+  margin: 20px;
+  float: left;
+  padding: 20px;
+  background-color: antiquewhite;
+}
+.Img_ajustar {
+  width: 100%;
+}
+.info_noticia {
+  padding: 20px;
+}
+.titulo_noticia {
+text-align: center;
+text-decoration: underline;
+font-weight: bolder;
+padding: 15px;
+}
+.color {
+  color: red;
+  font-weight: bolder;
+}
+
+input {
+  width: 500px;
+  padding: 10px;
+  display: block;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+/* MAIN */
+section {
+  flex-grow: 1;
+  background: white;
+  padding: 2rem;
+  animation: fadeIn 0.4s ease-in;
+  margin: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #f5b625;
+  color: #222;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* MARQUESINA ANIMADA */
+.marquesina {
+  animation: parpadeo 1s infinite alternate;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes parpadeo {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+/* MENÚ HAMBURGUESA CON CSS */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  padding: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    background: #cdfe99;
+  }
+
+  .menu-toggle:checked + .menu-icon + ul {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 1rem;
+  }
+}
